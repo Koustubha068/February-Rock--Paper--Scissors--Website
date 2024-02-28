@@ -37,14 +37,12 @@ body{
     justify-content:center;
     margin-left: 20rem; 
     text-align:center;
-    font-family: "jaf-lapture", serif;
-  
+    font-family: 'Rock Paper Scissors', sans-serif;
     
 }
-#round{
-    font-size:2rem;
-
+.h1{
+    font-size:50px;
+    font-weight:45px;
 }
-
 
 /* end of round*/
