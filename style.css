@@ -1,31 +1,45 @@
 body {
-    margin: 0;
+
     font-family: Arial, sans-serif;
     background-color:rgb(206, 205, 205);
+    justify-content: center;
+    padding:0;
+    box-sizing: border-box;
+    
+    
   }
   
   header {
     background-image: linear-gradient(#d6d1d6,#8b888b, gray,rgb(73, 71, 71));
     color: #0c0c0c;
     text-align: center;
-    padding: 10px;
     
+    min-width:100%;
+    margin:0;
+    width:100%;
+    margin-left:10px;
+    margin-right:-150px;
+    width:auto;
   }
-  
+
   .RPS {
-    margin: 0;
+    width:auto;
+    width:100%;
     font-size:30px;
     font-family: "jaf-lapture", serif;
     font-weight: bold;
+    margin-left:-60px;
   }
 #Round{
     font-family: "jaf-lapture", serif;
     text-align:center;
     font-size: 25px;
+    margin-left:2%;
 }
 .round{
     justify-content:center;
-    margin-left:34%;
+    margin-left:35%;
+width:500px;
     margin-top:2%;
     border: 4px solid black;
     width:30%;
@@ -64,12 +78,93 @@ input{
 #scissors{
   background-color:transparent;
   border:none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
 }
+#scissors:hover {
+  background-color: rgba(189, 188, 188, 0.5);
+  
+}
+
+#scissors:active {
+  background-color: #929192;
+  
+}
+
 #paper{
   background-color:transparent;
   border:none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+  margin-left:10%;
+}
+#paper:hover {
+  background-color: rgba(189, 188, 188, 0.5);
+  
+}
+
+#paper:active {
+  background-color: #929192;
+  
 }
 #rock{
   background-color:transparent;
   border:none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+#rock:hover {
+  background-color: rgba(189, 188, 188, 0.5);
+  
+}
+
+#rock:active {
+  background-color: #929192;
+  
+}
+.column{
+float:left;
+width:33.33%;
+padding:5px;
+}
+row::after{
+  content:"";
+  display:table;
+  clear:both;
+}
+.main{
+  justify-content:space-around;
+  
+}
+.choices{
+  width:100%;
+  height:auto;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  overflow:hidden;
+  padding:1px;
+  margin-left:-5%;
+ 
+
+
+}
+.player{
+  margin-left:20%;
+  margin-right:10%;
 }

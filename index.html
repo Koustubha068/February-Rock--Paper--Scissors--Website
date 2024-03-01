@@ -34,11 +34,31 @@
 
     <!--end of what is your name-->
 
-    <!--beg of 3 buttons -->
+
+    <!--start of divs that show players choice and computers choice-->
     
-    <button id ="paper"><img src ="paper-removebg-preview (1).png" ></button>
-    <button id ="rock"><img src ="Rock-removebg-preview (1).png" ></button>
-    <button id="scissors"><img src ="scissors-removebg-preview (1).png" ></button>
+   <div class="choices">
+   <div id= "player" class="players"><img src="Player Choice.png"></div>
+   <div class="computer"><img src="Comp.png"></div>
+   </div>
+
+
+
+  <!--end of divs that show players choice and computers choice-->
+
+    <!--beg of 3 buttons -->
+    <div class="row " >
+      <div class="column">
+        <button onclick="button(image1)" id ="paper"><img src ="paper-removebg-preview (1).png" width="100%;" ></button>
+      </div>
+      
+      <div class="column">
+        <button onclick="button(image2)" id ="rock"><img src ="Rock-removebg-preview (1).png" width="100%;" ></button>
+      </div>
+
+        <div class="column">
+          <button onclick="button(image3)" id="scissors"><img src ="scissors-removebg-preview (1).png" width="100%"></button></div>
+    </div>
 
     <!--end of 3 buttons-->
   </div>
@@ -53,6 +73,11 @@
     let message =document.querySelector("#message")
     message.innerHTML ="Welcome to the game, " + userInput.value +"!"
 
+
+}
+
+function changeImage(image){
+  document.querySlector()
 
 }
 </script>
