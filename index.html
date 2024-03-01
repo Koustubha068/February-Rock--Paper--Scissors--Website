@@ -37,9 +37,9 @@
 
     <!--start of divs that show players choice and computers choice-->
     
-   <div class="choices">
-   <div id= "player" class="players"><img src="Player Choice.png"></div>
-   <div class="computer"><img src="Comp.png"></div>
+   <div class="choices row-5 justify-content:center text-align:center ">
+   <div id= "player" class="col-5 players"><img class="img-fluid" src="Player Choice.png"></div>
+   <div class="col-5 computer"><img class="img-fluid" src="Comp.png"></div>
    </div>
 
 
@@ -47,17 +47,17 @@
   <!--end of divs that show players choice and computers choice-->
 
     <!--beg of 3 buttons -->
-    <div class="row " >
-      <div class="column">
-        <button onclick="button(image1)" id ="paper"><img src ="paper-removebg-preview (1).png" width="100%;" ></button>
+    <div class="row-3 justify-content:center text-align:center " >
+      <div class=" col-4 ">
+        <button onclick="button(image1)" id ="paper"><img class="img-fluid" src ="paper-removebg-preview (1).png" width="100%;" ></button>
       </div>
       
-      <div class="column">
-        <button onclick="button(image2)" id ="rock"><img src ="Rock-removebg-preview (1).png" width="100%;" ></button>
+      <div class=" col-4 ">
+        <button onclick="button(image2)" id ="rock"><img class="img-fluid" src ="Rock-removebg-preview (1).png" width="100%;" ></button>
       </div>
 
-        <div class="column">
-          <button onclick="button(image3)" id="scissors"><img src ="scissors-removebg-preview (1).png" width="100%"></button></div>
+        <div class="  col-4 ">
+          <button onclick="button(image3)" id="scissors"><img class="img-fluid" src ="scissors-removebg-preview (1).png" width="100%"></button></div>
     </div>
 
     <!--end of 3 buttons-->
@@ -70,7 +70,7 @@
 <script>
   function myFunction() {
     let userInput = document.querySelector("#userInput")
-    let message =document.querySelector("#message")
+    let message = document.querySelector("#message")
     message.innerHTML ="Welcome to the game, " + userInput.value +"!"
 
 
