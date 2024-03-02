@@ -25,11 +25,7 @@ function playGame (Paper,userChoice){
     var choices = ['rock','paper','scissors']
     var computerChoice = choices[Math.floor(Math.random()*choices.length)]
 
-    if (computerChoice = "rock"){
-        document.getElementById('Computer').src =Paper
-    } else (
-        document.getElemenetById('Computer').src =Paper
-    )
+    document.getElementById('Computer').src= computerChoice
 
 
     
@@ -51,7 +47,7 @@ function playGame (Paper,userChoice){
         computerScore ++
     }
 
-
-    
+    document.getElementById('result').textContent = roundMessage;
+    document.getElementById('score').textContent = "Score: Player " + playerScore + " - Computer " + computerScore;
 
 }
