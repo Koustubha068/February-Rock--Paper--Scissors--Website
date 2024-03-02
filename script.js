@@ -10,6 +10,8 @@ const Paper = 'paper.png'
 const Rock = 'rock.png'
 const Scissors = 'scissors.png'
 
+var playerScore = 0
+    var computerScore = 0
 
 
 
@@ -30,26 +32,26 @@ function playGame (Paper,userChoice){
     computerChoiceImage.style.width =newWidth +'rem'
 
 
+    var resultMessage = "You chose " + userChoice + ". Computer chose " + computerChoice + ". ";
     
-    var playerScore = 0
-    var computerScore = 0
+    if (userChoice === computerChoice) {
+        resultMessage += "It's a tie!";
+      } else if (
+        (userChoice === 'rock' && computerChoice === 'scissors') ||
+        (userChoice === 'paper' && computerChoice === 'rock') ||
+        (userChoice === 'scissors' && computerChoice === 'paper')
+      ) {
+        resultMessage += "You win this round!";
+        playerScore++;
+      } else {
+        resultMessage += "Computer wins this round!";
+        computerScore++;
+      }
 
-    var roundMessage = userInput + "chose" + userChoice + "." + "Computer chose" + computerChoice +"."
-    if(userChoice === computerChoice){
-        roundMessage += "It's a tie"
-    } else if(
-        (userChoice === 'rock' && computerChoice ==='scissors') ||
-        (userChoice === 'paper' && computerChoice ==='rock') ||
-        (userChoice === 'scissors' && computerChoice ==='paper') 
-    ){
-        roundMessage += userInput + "wins!"
-        playerScore ++
-    } else{
-        roundMessage += "Coputer Wins!"
-        computerScore ++
-    }
+      roundsPlayed++;
 
-    document.getElementById('result').textContent = roundMessage;
-    document.getElementById('score').textContent = "Score: Player " + playerScore + " - Computer " + computerScore;
+      document.getElementById('result').textContent = resultMessage;
+      document.getElementById('score').textContent = "Score: Player " + playerScore + " - Computer " + computerScore;
 
 }
+
