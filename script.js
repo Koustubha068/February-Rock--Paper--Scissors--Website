@@ -6,9 +6,9 @@ function myFunction() {
 
 }
 
-const Paper = 'papers-removebg-preview.png'
-const Rock = 'Rock-removebg-preview (1).png'
-const Scissors = 'scissors-removebg-preview (1).png'
+const Paper = 'paper.png'
+const Rock = 'rock.png'
+const Scissors = 'scissors.png'
 
 
 
@@ -17,15 +17,17 @@ function playGame (Paper,userChoice){
     document.getElementById('Player').src =Paper
   
     var imageElement =document.getElementById('Player')
-    var newHeight =300
-    var newWidth =300
-    imageElement.style.height = newHeight + 'px';
-    imageElement.style.width = newWidth + 'px';
+    var newHeight =15
+    var newWidth =25
+    imageElement.style.height = newHeight + 'rem';
+    imageElement.style.width = newWidth + 'rem';
     //the above lines of code changes the image and properties of it such as width and height
     var choices = ['rock','paper','scissors']
     var computerChoice = choices[Math.floor(Math.random()*choices.length)]
-
-    document.getElementById('Computer').src= computerChoice
+    var computerChoiceImage = document.getElementById('Computer'); // created a variable which changes the images that appear for computer. Did this using document.get element by id
+    computerChoiceImage.src = computerChoice + ".png"
+    computerChoiceImage.style.height =newHeight +'rem'
+    computerChoiceImage.style.width =newWidth +'rem'
 
 
     

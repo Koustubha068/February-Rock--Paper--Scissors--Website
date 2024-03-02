@@ -75,20 +75,18 @@ input{
   font-size:1.5rem;
 }
 #scissors{
-  background-color:transparent;
-  border:none;
+  background-color: rgba(173, 171, 171, 0.5);
   font-size: 16px;
   cursor: pointer;
   color: #fff;
-  border: none;
-  outline: none;
+border:2px solid black;
   transition: background-color 0.3s ease;
   justify-content:center;
   margin-top:3%;
  
 }
 #scissors:hover {
-  background-color: rgba(189, 188, 188, 0.5);
+  background-color: rgba(139, 137, 137, 0.5);
   
   justify-content:center;
   
@@ -100,20 +98,18 @@ input{
 }
 
 #paper{
-  background-color:transparent;
-  border:none;
+  background-color: rgba(173, 171, 171, 0.5);
+  border:2px solid black;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   color: #fff;
-  border: none;
-  outline: none;
   transition: background-color 0.3s ease;
   margin-left:10%;
   justify-content:center;
 }
 #paper:hover {
-  background-color: rgba(189, 188, 188, 0.5);
+  background-color: rgba(139, 137, 137, 0.5);
   justify-content:center;
   
 }
@@ -123,19 +119,17 @@ input{
   
 }
 #rock{
-  background-color:transparent;
-  border:none;
+  background-color: rgba(173, 171, 171, 0.5);
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   color: #fff;
-  border: none;
-  outline: none;
   transition: background-color 0.3s ease;
   justify-content:center;
+  border:2px solid black;
 }
 #rock:hover {
-  background-color: rgba(189, 188, 188, 0.5);
+  background-color: rgba(139, 137, 137, 0.5);
   justify-content:center;
   
 }
