@@ -49,7 +49,7 @@ width:35%;
     
 }
 .name{
-    font-size: 20px;
+    font-size: 1.8rem;
     font-family: "jaf-lapture", serif;
     margin-left:-0.2%;
     margin-top:5%;
@@ -174,4 +174,14 @@ row::after{
 margin-left:25%;
 width:35%;
   align-items:center;
+}
+#result{
+  font-size:1.8rem;
+  font-family: "jaf-lapture", serif;
+  margin-left:25%;
+}
+#score{
+  font-size:1.8rem;
+  font-family: "jaf-lapture", serif;
+  margin-left:25%;
 }
