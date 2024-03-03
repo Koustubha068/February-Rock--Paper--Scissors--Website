@@ -27,7 +27,7 @@ body {
     font-size:30px;
     font-family: "jaf-lapture", serif;
     font-weight: bold;
-    margin-left:-6%;
+   margin-left:-8.5%;
   }
 #Round{
     font-family: "jaf-lapture", serif;
@@ -37,7 +37,7 @@ body {
 }
 .round{
     justify-content:center;
-    margin-left:25%;
+    margin-left:21%;
 width:35%;
     margin-top:2%;
     border: 4px solid black;
@@ -165,17 +165,17 @@ row::after{
 .button{
 
   justify-content:center;
-margin-left:25%;
+margin-left:21%;
 width:35%;
   align-items:center;
 }
 #result{
   font-size:1.8rem;
   font-family: "jaf-lapture", serif;
-  margin-left:25%;
+  margin-left:21%;
 }
 #score{
   font-size:1.8rem;
   font-family: "jaf-lapture", serif;
-  margin-left:25%;
+  margin-left:21%;
 }
