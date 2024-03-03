@@ -10,12 +10,15 @@ function myFunction() {
 //const Rock = 'rock.png'
 //const Scissors = 'scissors.png'
 
+
 var playerScore = 0
-    var computerScore = 0
+var computerScore = 0
+var roundsPlayed = 0
 
 
 
 function playGame (userChoice){
+  if(roundsPlayed<5){
     document.getElementById('Player').src = userChoice + ".png"
    
 
@@ -49,10 +52,60 @@ function playGame (userChoice){
         computerScore++;
       }
 
+      roundsPlayed++
 
 
       document.getElementById('result').textContent = resultMessage;
-      document.getElementById('score').textContent = "Score: Player " + playerScore + " - Computer " + computerScore;
+      document.getElementById('score').textContent = "Score: Player: " + playerScore + " /  Computer: " + computerScore;
 
-}
+      if (roundsPlayed === 5) {
+        announceWinner();
+      }
+    } else {
+      alert("The game is over. Please restart to play again.");
+    }
+  }
+
+  function announceWinner() {
+    var winnerMessage = "Game over! ";
+
+    if (playerScore > computerScore) {
+      let winningMessage = ["You are the overall winner!","Congratulations on winning the game, player!","Great job on beating the computer!","You won!" ];
+      let randomNumber = winningMessage[Math.floor(Math.random() * winningMessage.length)]
+      winnerMessage += document.getElementById('result').textContent = randomNumber
+    } else if (computerScore > playerScore) {
+      let computerMessage = ["Computer is the final winner. Congratulations computer!","The computer has beaten you!","The computer won and you lost!"]
+      let randomMessage =computerMessage[Math.floor(Math.random() * computerMessage.length)]
+      winnerMessage += document.getElementById('result').textContent = randomMessage
+    } else {
+      winnerMessage += "It's a tie! Sadly, there is no overall winner";
+    }
+
+    document.getElementById('result').textContent = winnerMessage
+  }
+
+  function reset(){
+    playerScore = 0
+   computerScore = 0
+   roundsPlayed = 0
+
+   document.getElementById('result').textContent = "The Result will be here"
+   document.getElementById('score').textContent = "Score: Player: 0  / Computer: 0"
+   document.getElementById('Player').src = "Player Choice" +".png"
+    var imageElement =document.getElementById('Player')
+    var newHeight =23
+    var newWidth =18
+    imageElement.style.height = newHeight + 'rem';
+    imageElement.style.width = newWidth + 'rem';
+
+   document.getElementById('Computer').src = "Computer Choice" +".png"
+   var imageElement =document.getElementById('Computer')
+   var newHeight =23
+   var newWidth =18
+   imageElement.style.height = newHeight + 'rem';
+   imageElement.style.width = newWidth + 'rem';
+
+  }
+  
+
 
