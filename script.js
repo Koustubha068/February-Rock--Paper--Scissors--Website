@@ -6,18 +6,19 @@ function myFunction() {
 
 }
 
-const Paper = 'paper.png'
-const Rock = 'rock.png'
-const Scissors = 'scissors.png'
+//const Paper = 'paper.png'
+//const Rock = 'rock.png'
+//const Scissors = 'scissors.png'
 
 var playerScore = 0
     var computerScore = 0
 
 
 
-function playGame (Paper,userChoice){
-    document.getElementById('Player').src =Paper
-  
+function playGame (userChoice){
+    document.getElementById('Player').src = userChoice + ".png"
+   
+
     var imageElement =document.getElementById('Player')
     var newHeight =15
     var newWidth =25
@@ -48,7 +49,7 @@ function playGame (Paper,userChoice){
         computerScore++;
       }
 
-      roundsPlayed++;
+
 
       document.getElementById('result').textContent = resultMessage;
       document.getElementById('score').textContent = "Score: Player " + playerScore + " - Computer " + computerScore;
